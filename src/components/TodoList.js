@@ -1,6 +1,6 @@
 export const createToDoList = () => {
   const toDoListUl = document.createElement("ul");
-  toDoListUl.className("to_do_list");
+  toDoListUl.className = "to_do_list";
   document.querySelector("#app").append(toDoListUl);
   if (localStorage.getItem("toDoList") === null) {
     let toDoList = [];

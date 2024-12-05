@@ -1,4 +1,5 @@
-export const deleteFromList = (itemId) => {
-  const toDoListDB = JSON.parse(localStorage.getItem("toDoList"));
-  const listItem = document.querySelector(`#${itemId}`);
+export const deleteFromList = (listItem, toDoListDB) => {
+  const newToDoList = toDoListDB.filter((item) => item != listItem.innerHTML);
+  localStorage.setItem("toDoList", JSON.stringify(newToDoList));
+  listItem.remove;
 };
