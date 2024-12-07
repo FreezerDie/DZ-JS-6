@@ -1,4 +1,5 @@
 import { addToList } from "../utils/addToList";
+import { createToDoItem } from "./toDoItem";
 
 export const createToDoForm = () => {
   const submitForm = document.createElement("form");
@@ -16,7 +17,7 @@ export const createToDoForm = () => {
     const {
       item: { value: itemValue },
     } = event.target;
-    console.log(itemValue);
+    createToDoItem(itemValue);
     addToList(itemValue);
   });
 };

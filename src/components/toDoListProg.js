@@ -1,9 +1,9 @@
-import { CreateHeader } from "./header";
-import { createToDoForm } from "./TodoForm";
-import { createToDoList } from "./TodoList";
+import { createHeader } from "./Header";
+import { createToDoForm } from "./toDoForm";
+import { createToDoList } from "./toDoList";
 
 export const CreateToDoListProg = () => {
-  CreateHeader();
+  createHeader();
   createToDoForm();
   createToDoList();
 };

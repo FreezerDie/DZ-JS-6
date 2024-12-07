@@ -1,3 +1,5 @@
+import { createToDoItem } from "./toDoItem";
+
 export const createToDoList = () => {
   const toDoListUl = document.createElement("ul");
   toDoListUl.className = "to_do_list";
@@ -6,10 +8,9 @@ export const createToDoList = () => {
     let toDoList = [];
     localStorage.setItem("toDoList", JSON.stringify(toDoList));
   } else {
-    const DoList = JSON.parse(localStorage.getItem("toDoList"));
-    DoList.forEach((item) => {
-      const text = document.createElement("li");
-      text.innerText = item;
+    const doList = JSON.parse(localStorage.getItem("toDoList"));
+    doList.forEach((listItem) => {
+      createToDoItem(listItem);
     });
   }
 };

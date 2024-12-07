@@ -1,7 +1,7 @@
-export const CreateHeader = () => {
+export const createHeader = () => {
   const header = document.createElement("h1");
 
-  header.innerHTML = "to do list";
+  header.innerHTML = "To do list";
 
   document.querySelector("#app").append(header);
 };
